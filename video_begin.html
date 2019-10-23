@@ -40,7 +40,7 @@
 	  	Your browser does not support HTML5 video.
 	</video>
 	<figcaption>[Dramatic music throughout but no speaking]</figcaption>
-</figure>
+	</figure>
 
 	<br/>
 	<button id="mute" onclick="mute()" type="button">Mute</button><br>
@@ -59,26 +59,30 @@
 		// You may only change code in the script tag.
 		// You can not change the HTML in the file.
 
-
 	function playVid() { 
 		console.log("Play Video")
 		// Play the video and update the volume.
 		document.getElementById('myVideo').play();
-		
+		document.querySelector('#volume').innerHTML = document.querySelector("#myVideo").volume;
 
 	} 
 
 	function pauseVid() { 
 		console.log("Pause Video")
-	  	// Play the video.
+	  	// Pause the video.
+		document.getElementById('myVideo').pause();
 	} 
 
 	function slowSpeed() {
-		// Slow the vido speed by half and log the new rate to the console. 
+		// Slow the video speed by half and log the new rate to the console. 
+		document.getElementById("myVideo").playbackRate = 0.5;
+		console.log("Video rate: x0.5");
 	} 
 
 	function increaseSpeed() {
-		// Double the video speen and log the new rate to the console. 
+		// Double the video speed and log the new rate to the console. 
+		document.getElementById("myVideo").playbackRate = 2;
+		console.log("Video rate: x2");
 	} 
 
 	function mute() { 
