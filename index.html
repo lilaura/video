@@ -140,8 +140,8 @@
 		// Log what the new values are to the console.
 		var declaration = document.styleSheets[0].cssRules[0].style;
 		var ran = Math.random();
-		declaration.setProperty("filter", "grayscale(70%)");
-		declaration.setProperty("transform", "skewX(20deg");
+		declaration.setProperty("filter", "grayscale("+ ran + ")");
+		declaration.setProperty("transform", "skewX(" + ran*50 + "deg)");
 		console.log(declaration.filter + " and " + declaration.transform);
 	}
 
