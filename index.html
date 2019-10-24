@@ -139,9 +139,10 @@
 		// Use setProperty to change the grayscale filter and transform properties of the video.
 		// Log what the new values are to the console.
 		var declaration = document.styleSheets[0].cssRules[0].style;
+		var ran = Math.random();
 		declaration.setProperty("filter", "grayscale(70%)");
 		declaration.setProperty("transform", "skewX(20deg");
-		console.log("Greyscale 70% and skewX 20deg");
+		console.log(declaration.filter + " and " + declaration.transform);
 	}
 
 	</script> 
