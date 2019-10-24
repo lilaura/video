@@ -113,11 +113,11 @@
 
 	volumeSlider.oninput = function() {
 		// Change the volume (0 is off, 100 is full volume, everything else is proportionally in between)
-		vid.volume = (document.querySelector('#volumeSlider').value)/100;
+		vid.volume = (this.value)/100;
 		// Make sure to update the volume element.
-		document.querySelector('#volume').innerHTML = vid.volume * 100 + '%';
+		document.querySelector('#volume').innerHTML = this.value + '%';
 		// Update the console log with the new volume as well.
-		console.log("Volume: " + vid.volume *100 + '%');
+		console.log("Volume: " + this.value + '%');
 	}
 	       
 
