@@ -20,6 +20,10 @@
 		button{
 			margin-bottom: 5px;
 		}
+		.play, .pause {
+			width: 55px;
+			height: 75px;
+		}
 
 		/*You can not change anything in the style tag other than to add images for the buttons. */
 </style>
@@ -27,8 +31,8 @@
 <body> 
 <main>
 	<h1>JavaScript Video Controls</h1>
-	<button onclick="playVid()" type="button" class = "play">Play Video</button>
-	<button onclick="pauseVid()" type="button" class = "pause">Pause Video</button><br>
+	<button onclick="playVid()" type="button" class = "play"><img src = play.svg>Play Video</button>
+	<button onclick="pauseVid()" type="button" class = "pause"><img src = pause.svg>Pause Video</button><br>
 	<button onclick="slowSpeed()" type="button">Slow Down</button>
 	<button onclick="increaseSpeed()" type="button">Speed Up</button><br>
 
@@ -135,7 +139,8 @@
 		// Use setProperty to change the grayscale filter and transform properties of the video.
 		// Log what the new values are to the console.
 		var declaration = document.styleSheets[0].cssRules[0].style;
-		declaration.setProperty("filter", "grayscale(100%)");
+		declaration.setProperty("filter", "grayscale(70%)");
+		console.log("Greyscale and skewX: ");
 	}
 
 	</script> 
